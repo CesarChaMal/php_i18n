@@ -1,0 +1,23 @@
+# Spanish translations for php_i package
+# Traducciones al espa~nol para el paquete php_i.
+# Copyright (C) 2023 THE php_i'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the php_i package.
+# U-RAZERBLADE14\Cesar <cesarchamal@gmail.com>, 2023.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: php_i 18n\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-13 05:40+0200\n"
+"PO-Revision-Date: 2023-04-13 05:40+0200\n"
+"Last-Translator: U-RAZERBLADE14\\Cesar <cesarchamal@gmail.com>\n"
+"Language-Team: Spanish\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: index.php:47
+msgid "GREETING"
+msgstr "Hola"

@@ -1,5 +1,5 @@
 https://mlocati.github.io/articles/gettext-iconv-windows.html
-xgettext -n --language=PHP --from-code=UTF-8 --keyword=_ --keyword=gettext --output=messages.pot index.php
+xgettext -n --language=PHP --from-code=UTF-8 --keyword=_ --keyword=gettext --output=messages.pot src/index.php
 
 msginit --input=messages.pot --output-file=locale/en_US/LC_MESSAGES/messages.po --locale=en_US
 msginit --input=messages.pot --output-file=locale/es_MX/LC_MESSAGES/messages.po --locale=es_MX
@@ -11,4 +11,10 @@ msgfmt locale/es_MX/LC_MESSAGES/messages.po --output-file=locale/es_MX/LC_MESSAG
 msgfmt locale/es_ES/LC_MESSAGES/messages.po --output-file=locale/es_ES/LC_MESSAGES/messages.mo
 msgfmt locale/pl_PL/LC_MESSAGES/messages.po --output-file=locale/pl_PL/LC_MESSAGES/messages.mo
 
+composer init
+composer require gettext/gettext
+composer install
+
+composer dump-autoload
+composer remove gettext/gettext
 
