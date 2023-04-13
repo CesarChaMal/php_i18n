@@ -1,0 +1,14 @@
+https://mlocati.github.io/articles/gettext-iconv-windows.html
+xgettext -n --language=PHP --from-code=UTF-8 --keyword=_ --keyword=gettext --output=messages.pot index.php
+
+msginit --input=messages.pot --output-file=locale/en_US/LC_MESSAGES/messages.po --locale=en_US
+msginit --input=messages.pot --output-file=locale/es_MX/LC_MESSAGES/messages.po --locale=es_MX
+msginit --input=messages.pot --output-file=locale/es_ES/LC_MESSAGES/messages.po --locale=es_ES
+msginit --input=messages.pot --output-file=locale/pl_PL/LC_MESSAGES/messages.po --locale=pl_PL
+
+msgfmt locale/en_US/LC_MESSAGES/messages.po --output-file=locale/en_US/LC_MESSAGES/messages.mo
+msgfmt locale/es_MX/LC_MESSAGES/messages.po --output-file=locale/es_MX/LC_MESSAGES/messages.mo
+msgfmt locale/es_ES/LC_MESSAGES/messages.po --output-file=locale/es_ES/LC_MESSAGES/messages.mo
+msgfmt locale/pl_PL/LC_MESSAGES/messages.po --output-file=locale/pl_PL/LC_MESSAGES/messages.mo
+
+
