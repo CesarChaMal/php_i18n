@@ -1,19 +1,32 @@
+-- install gettext
 https://mlocati.github.io/articles/gettext-iconv-windows.html
+-- unzip the gettext folder and to the env path C:\gettext\bin
+
+-- install composer
+https://www.hostinger.com/tutorials/how-to-install-composer
+
+-- generate template
 xgettext -n --language=PHP --from-code=UTF-8 --keyword=_ --keyword=gettext --output=messages.pot src/index.php
 
+-- generate the templates for the launguages
 msginit --input=messages.pot --output-file=locale/en_US/LC_MESSAGES/messages.po --locale=en_US
 msginit --input=messages.pot --output-file=locale/es_MX/LC_MESSAGES/messages.po --locale=es_MX
 msginit --input=messages.pot --output-file=locale/es_ES/LC_MESSAGES/messages.po --locale=es_ES
 msginit --input=messages.pot --output-file=locale/pl_PL/LC_MESSAGES/messages.po --locale=pl_PL
 
+-- compile the files
 msgfmt locale/en_US/LC_MESSAGES/messages.po --output-file=locale/en_US/LC_MESSAGES/messages.mo
 msgfmt locale/es_MX/LC_MESSAGES/messages.po --output-file=locale/es_MX/LC_MESSAGES/messages.mo
 msgfmt locale/es_ES/LC_MESSAGES/messages.po --output-file=locale/es_ES/LC_MESSAGES/messages.mo
 msgfmt locale/pl_PL/LC_MESSAGES/messages.po --output-file=locale/pl_PL/LC_MESSAGES/messages.mo
 
+-- if you dont have a composer.json file run this
 composer init
 composer require gettext/gettext
+
+-- if you have the composer.json file run this
 composer install
+
 
 composer dump-autoload
 composer remove gettext/gettext
