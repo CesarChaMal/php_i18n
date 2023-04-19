@@ -6,7 +6,7 @@ https://mlocati.github.io/articles/gettext-iconv-windows.html
 https://www.hostinger.com/tutorials/how-to-install-composer
 
 -- generate template
-xgettext -n --language=PHP --from-code=UTF-8 --keyword=_ --keyword=gettext --output=messages.pot src/index.php
+xgettext -n --language=PHP --from-code=UTF-8 --keyword=_ --keyword=gettext --output=messages.pot index.php
 
 -- generate the templates for the launguages
 msginit --input=messages.pot --output-file=locale/en_US/LC_MESSAGES/messages.po --locale=en_US
